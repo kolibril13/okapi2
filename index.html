@@ -1,9 +1,13 @@
 <html>
 <script>
+    function changeText(text) {
+        document.getElementById('boldStuff').innerHTML = text;
+    }
     function get_emoji(emoji) {
         let emoji_code = emoji.codePointAt(0).toString(16).toUpperCase();
         new_url = `https://openmoji.org/data/color/svg/${emoji_code}.svg`
-        document.write(`<img src=${new_url} style="height: 80px;">`);
+        document.write(`<img src=${new_url} style='height: 80px'; onclick='changeText("${emoji_code}")'>`);
+
     }
     get_emoji("🦴")
     get_emoji("🦞")
@@ -12,7 +16,9 @@
 
 <body>
     <br>
-    Hello
+    First
+    <p>Welcome to the site <b id='boldStuff'>dude</b> </p>
+
 </body>
 
 </html>
