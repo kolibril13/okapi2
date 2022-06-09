@@ -1,47 +1,18 @@
 <html>
-
-<head>
-    <title>Emoji-Test</title>
-    <link rel="stylesheet" href="openmoji-color-awesome.css">
-</head>
+<script>
+    function get_emoji(emoji) {
+        let emoji_code = emoji.codePointAt(0).toString(16).toUpperCase();
+        new_url = `https://openmoji.org/data/color/svg/${emoji_code}.svg`
+        document.write(`<img src=${new_url} style="height: 80px;">`);
+    }
+    get_emoji("🦴")
+    get_emoji("🦞")
+    get_emoji("🎭")
+</script>
 
 <body>
-    <div>
-        <p class="">Select an Emoji:</p>
-        <select id="emoji-selector">
-            <option value="🦴">🦴</option>
-            <option value="🤖">🤖</option>
-            <option value="👨‍🎨">👨‍🎨</option>
-            <option value="🧠">🧠</option>
-            <option value="🦞">🦞</option>
-            <option value="🌯">🌯</option>
-            <option value="🎭">🎭</option>
-    </select>
-</div>
-
-Second:
-<br>    
-<i class="oma oma-bone"></i>
-<i class="oma oma-robot"></i>
-<i class="oma oma-man-artist"></i>
-<i class="oma oma-brain"></i>
-<i class="oma oma-crab"></i>
-<i class="oma oma-burrito"></i>
-<i class="oma oma-performing-arts"></i>
-
-<br>
-Third:
-<br>
-<img src="https://openmoji.org/data/color/svg/1F9B4.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F916.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F468-200D-1F3A8.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F9E0.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F99E.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F32F.svg" style="height: 40px;">
-<img src="https://openmoji.org/data/color/svg/1F3AD.svg" style="height: 40px;">
-
-
-
+    <br>
+    Hello
 </body>
 
 </html>
