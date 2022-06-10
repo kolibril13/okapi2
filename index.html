@@ -1,25 +1,17 @@
 <html>
 <script>
-    function changeText(text) {
-        document.getElementById('boldStuff').innerHTML = text;
-    }
-    function get_emoji(emoji) {
-        let emoji_code = emoji.codePointAt(0).toString(16).toUpperCase();
-        new_url = `https://openmoji.org/data/color/svg/${emoji_code}.svg`
-        document.write(`<img src=${new_url} style="height: 50px"; onclick="changeText('${emoji_code}')">`);
-
-    }
-    get_emoji("🦴")
-    get_emoji("🦷")
-    get_emoji("🫁")
-    get_emoji("🫀")
-    get_emoji("🎭")
+  function get_emoji(emoji) {
+    document.write(`<br>`)
+    let emoji_code = [...emoji].map(e => e.codePointAt(0).toString(16)).join(`-`).toUpperCase()
+    new_url = `https://openmoji.org/data/color/svg/${emoji_code}.svg`
+    document.write(`<img src=${new_url} style="height: 80px;">`);
+    document.write(`<br>`)
+    document.write(emoji_code)
+    document.write(`<br><br>`)
+  }
+  get_emoji("🫀") // emoji code is 1FAC0
+  get_emoji("👩") // emoji code is 1F469
+  get_emoji("👩‍⚕️") // emoji code is 1F469-200D-2695-FE0F 
 </script>
-
-<body>
-    <br>
-    <p>Emoji Code: <b id='boldStuff'>TEXT</b> </p>
-
-</body>
 
 </html>
