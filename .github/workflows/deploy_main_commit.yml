@@ -22,5 +22,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
+          clean-exclude: pr-preview/
           branch: gh-pages # The branch the action should deploy to.
           folder: . # The folder the action should deploy.
